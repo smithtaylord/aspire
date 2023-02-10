@@ -33,12 +33,37 @@
 </style>
 
 <body class="">
-  <header></header>
-  <main></main>
-  <footer class="container">
+  <header class="container my-2">
+    <div class="row ">
+      <div class="col-3 p-3 bg-dark rounded text-light">
+        <h3>Image By</h3>
+        <h3>Some Cool Guy</h3>
+      </div>
+      <div class="col-2 offset-6 p-3 rounded text-end bg-dark text-light text-center">
+        <div class="">
+          <h3 selectable>26 c</h3>
+          <h3>Sunny</h3>
+          <h3><i class="mdi mdi-sun-thermometer"></i> </h3>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container-fluid flex-grow-1">
+    <div class="row h-100">
+      <div class="col-6 m-auto ">
+        <div class="">
+          <h1 class="fw-bold text-center">2:30 pm</h1>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container pb-2">
     <div class="row">
-      <div class="col-6 offset-3"></div>
-      <div class="col-3">
+      <div class="col-8  py-5 d-flex align-items-end ">
+        <p class="text-light bg-dark p-2 rounded"><em>Here is an aspirational quote! Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. A labore </em></p>
+      </div>
+      <div class="col-4 bg-dark text-light rounded py-2">
         <div class="d-flex justify-content-between p-2">
           <h4>aspirations</h4>
           <h4 id="todoCount">0 left</h4>
@@ -56,7 +81,7 @@
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="What are your aspirations?" name="description"
               id="description" required>
-            <button class="btn btn-outline-info mdi mdi-plus" type="submit"></button>
+            <button class="btn btn-outline-primary mdi mdi-plus" type="submit"></button>
           </div>
         </form>
       </div>
