@@ -39,6 +39,22 @@ export class TodosController {
             Pop.error(error.message)
             console.error('[createTodo]', error)
         }
+    }
+    async destroyTodo(todoId) {
+        try {
+            await todosService.destroyTodo(todoId)
+        } catch (error) {
+            Pop.error(error.message)
+            console.error('[distroy Todo]', error)
+        }
+    }
 
+    async checkTodo(todoId) {
+        try {
+            await todosService.checkTodo(todoId)
+        } catch (error) {
+            Pop.error(error.message)
+            console.error('[check todo]', error)
+        }
     }
 }
