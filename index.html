@@ -52,11 +52,13 @@
             <i class="mdi mdi-delete-circle text-danger selectable fs-4" onclick=""></i>
           </div> -->
         </div>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="What are your aspirations?"
-            aria-label="Recipient's username" aria-describedby="button-addon2">
-          <button class="btn btn-outline-info mdi mdi-plus" type="button" id="button-addon2"></button>
-        </div>
+        <form onsubmit="app.todosController.createTodo()">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="What are your aspirations?" name="description"
+              id="description" required>
+            <button class="btn btn-outline-info mdi mdi-plus" type="submit"></button>
+          </div>
+        </form>
       </div>
     </div>
 
