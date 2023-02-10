@@ -2,12 +2,13 @@ import { appState } from "../AppState.js";
 import { todosService } from "../Services/ToDosService.js";
 import { getFormData } from "../Utils/FormHandler.js";
 import { Pop } from "../Utils/Pop.js";
-import { setHTML } from "../Utils/Writer.js";
+import { setHTML, setText } from "../Utils/Writer.js";
 
 function _drawTodos() {
     let template = ''
     appState.todos.forEach(t => template += t.TodoTemplate)
     setHTML('todo-list-items', template)
+    setText('todoCount', `${appState.todos.length} left`)
 }
 
 export class TodosController {
@@ -42,7 +43,9 @@ export class TodosController {
     }
     async destroyTodo(todoId) {
         try {
-            await todosService.destroyTodo(todoId)
+            if (await Pop.confirm('Are you sure you want to delete this aspiration?')) {
+                await todosService.destroyTodo(todoId)
+            }
         } catch (error) {
             Pop.error(error.message)
             console.error('[distroy Todo]', error)
