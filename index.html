@@ -19,35 +19,47 @@
   <title>aspire</title>
 </head>
 
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
 
 <body class="">
-  <header class="container-fluid my-2">
+  <header class="container-fluid my-2 sticky-top">
     <div class="row">
-      <div class="col-3 px-5 mt-2">
+      <div class="col-6 col-md-3 px-5 mt-2">
         <h1 class="fs-3 text-shadow"> aspire <i class="mdi mdi-image-filter-drama-outline"></i></h1>
         <small class="on-hover text-shadow"><em>Achieve More with Aspire: Your Personal Task Master</em></small>
       </div>
-      <div class="col-2 offset-6 py-3 ">
-        <div class="rounded text-end glass-card text-center py-3 text-shadow" id="weather">
-          <!-- <div class="">
-          <h3 selectable>26 c</h3>
-          <h3>Sunny</h3>
-          <img src="https://openweathermap.org/img/w/02d.png" alt="">
-        </div> -->
+      <div class="col-6 col-md-2 offset-md-6 py-3 ">
+        <div class="rounded text-end glass-card text-center py-3 text-shadow flip-card" id="weather">
         </div>
       </div>
     </div>
   </header>
 
 
-  <main class="container-fluid flex-grow-1">
-    <div class="row h-100">
-      <div class="col-10 m-auto ">
+  <main class="container-fluid sticky-top">
+    <div class="row">
+      <div class="col-10 m-auto">
         <div class="">
-          <h1 class="fw-bold text-center clock text-shadow pb-5" id="time"></h1>
+          <h1 class="d-none d-md-block -bold text-center clock text-shadow my-5 py-5" id="time"></h1>
         </div>
         <div class="row">
-          <div class="col-6 offset-6">
+          <div class="col-md-6 offset-md-6">
             <div class="p-2 text-shadow d-flex flex-column text-end pt-5 mt-5">
               <p><em id="quote-content"> </em></p>
               <p class="on-hover" id="quote-author"></p>
@@ -61,7 +73,7 @@
 
   <footer class="container-fluid pb-2 mb-2">
     <div class="row">
-      <div class="col-3 offset-1 glass-card rounded py-2">
+      <div class="col-10 col-md-3 offset-1 glass-card rounded py-2">
         <div class="d-flex justify-content-between p-2">
           <i id="chevron" class="mdi mdi-chevron-up fs-3" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"

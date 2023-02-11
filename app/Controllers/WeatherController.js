@@ -11,6 +11,8 @@ function _drawWeather() {
     // @ts-ignore
     let tempType = appState.tempType == 'C' ? `<h3>${appState.weather.tempC} °C </h3>` : `<h3>${appState.weather.tempF} °F </h3>`
     setHTML('temp-type', tempType)
+
+
 }
 
 
