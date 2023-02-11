@@ -14,6 +14,7 @@ class WeatherService {
     }
     async getWeather() {
         const res = await sandboxApi.get('/api/weather')
+        // @ts-ignore
         appState.weather = new Weather(res.data)
     }
 
