@@ -3,11 +3,18 @@ import { appState } from "../AppState.js";
 import { Weather } from "../Models/Weather.js";
 
 class WeatherService {
+    tempToggle() {
+        let tempType = appState.tempType
+        if (tempType == 'C') {
+            appState.tempType = 'F'
+        } else {
+            appState.tempType = 'C'
+        }
+
+    }
     async getWeather() {
         const res = await sandboxApi.get('/api/weather')
-        console.log('[getting the weather]', res.data);
         appState.weather = new Weather(res.data)
-        console.log(appState.weather);
     }
 
 }

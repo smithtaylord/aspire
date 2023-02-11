@@ -8,7 +8,8 @@ function _drawTodos() {
     let template = ''
     appState.todos.forEach(t => template += t.TodoTemplate)
     setHTML('todo-list-items', template)
-    setText('todoCount', `${appState.todos.length} left`)
+    let count = appState.todos.filter(t => t.completed == false)
+    setText('todoCount', `${count.length} left`)
 }
 
 export class TodosController {

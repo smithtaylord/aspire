@@ -7,12 +7,16 @@ import { setHTML } from "../Utils/Writer.js";
 function _drawWeather() {
     let template = appState.weather.WeatherCard
     setHTML('weather', template)
+    let tempType = appState.tempType == 'C' ? `<h3>${appState.weather.tempC} C° </h3>` : `<h3>${appState.weather.tempF} F° </h3>`
+    setHTML('temp-type', tempType)
 }
+
 
 export class WeatherController {
     constructor() {
         this.getWeather()
         appState.on('weather', _drawWeather)
+        appState.on('tempType', _drawWeather)
     }
 
     async getWeather() {
@@ -21,6 +25,14 @@ export class WeatherController {
         } catch (error) {
             Pop.error(error.message)
             console.error('[get weather]', error)
+        }
+    }
+    tempToggle() {
+        try {
+            weatherService.tempToggle()
+        } catch (error) {
+            Pop.error(error.message)
+            console.error('[temp toggle}', error)
         }
     }
 }

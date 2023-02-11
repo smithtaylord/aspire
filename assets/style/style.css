@@ -11,3 +11,7 @@ body {
     color: gray;
     text-decoration: line-through;
 }
+
+.weather-card {
+    cursor: pointer;
+}
