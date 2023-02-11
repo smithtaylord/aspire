@@ -12,7 +12,7 @@ class AppState extends EventEmitter {
   imgUrl = ''
   // @ts-ignore
   weather = null
-  tempType = 'C'
+  tempType = 'F'
   quoteContent = ''
   quoteAuthor = ''
   time = ''

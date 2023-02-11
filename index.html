@@ -18,81 +18,78 @@
   <link rel="stylesheet" href="assets/style/style.css">
   <title>aspire</title>
 </head>
-<style>
-  body.debug .container,
-  body.debug .container-fluid {
-    outline: 2px double blue;
-    outline-offset: -2px;
-  }
 
-  body.debug .row {
-    outline: 2px dashed red;
-    outline-offset: -2px;
-  }
-
-  body.debug [class*="col-"] {
-    outline: 2px dotted forestgreen;
-    outline-offset: -3px;
-  }
-</style>
 
 <body class="">
   <header class="container-fluid my-2">
     <div class="row">
-      <div class="col-3 px-3">
-        <h1 class="fs-3"> aspire <i class="mdi mdi-image-filter-drama-outline"></i></h1>
-        <small class="on-hover"><em>Achieve More with Aspire: Your Personal Task Master</em></small>
+      <div class="col-3 px-5 mt-2">
+        <h1 class="fs-3 text-shadow"> aspire <i class="mdi mdi-image-filter-drama-outline"></i></h1>
+        <small class="on-hover text-shadow"><em>Achieve More with Aspire: Your Personal Task Master</em></small>
       </div>
-      <div class="col-2 offset-6 py-3 rounded text-end glass-card text-center" id="weather">
-        <!-- <div class="">
+      <div class="col-2 offset-6 py-3 ">
+        <div class="rounded text-end glass-card text-center py-3 text-shadow" id="weather">
+          <!-- <div class="">
           <h3 selectable>26 c</h3>
           <h3>Sunny</h3>
           <img src="https://openweathermap.org/img/w/02d.png" alt="">
         </div> -->
+        </div>
       </div>
-
     </div>
   </header>
+
+
   <main class="container-fluid flex-grow-1">
     <div class="row h-100">
-      <div class="col-6 m-auto ">
+      <div class="col-10 m-auto ">
         <div class="">
-          <h1 class="fw-bold text-center clock" id="time"></h1>
+          <h1 class="fw-bold text-center clock text-shadow pb-5" id="time"></h1>
+        </div>
+        <div class="row">
+          <div class="col-6 offset-6">
+            <div class="p-2 text-shadow d-flex flex-column text-end pt-5 mt-5">
+              <p><em id="quote-content"> </em></p>
+              <p class="on-hover" id="quote-author"></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
-  <footer class="container pb-2">
-    <div class="row">
 
-      <div class="col-4 glass-card rounded py-2">
-        <div class="d-flex justify-content-between p-2">
+
+  <footer class="container-fluid pb-2 mb-2">
+    <div class="row">
+      <div class="col-3 offset-1 glass-card rounded py-2">
+        <div class="d-flex justify-content-between p-2 text-shadow">
           <h4>aspirations</h4>
+          <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <i class="mdi mdi-chevron-up"></i>
+          </button>
           <h4 id="todoCount">0 left</h4>
         </div>
-        <div id="todo-list-items">
-          <!-- <div class="d-flex justify-content-between align-items-baseline px-2">
+        <div class="collapse" id="collapseExample">
+          <div id="todo-list-items">
+            <!-- <div class="d-flex justify-content-between align-items-baseline px-2">
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label>This is my todo item</label>
             </div>
             <i class="mdi mdi-delete-circle text-danger selectable fs-4" onclick=""></i>
           </div> -->
-        </div>
-        <form onsubmit="app.todosController.createTodo()">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="What are your aspirations?" name="description"
-              id="description" required>
-            <button class="btn btn-outline-primary mdi mdi-plus" type="submit"></button>
           </div>
-        </form>
-      </div>
-      <div class="col-7 offset-1  py-5 d-flex align-items-end ">
-        <div class="p-2 rounded">
-          <p><em id="quote-content"> </em></p>
-          <p class="on-hover" id="quote-author"></p>
+          <form onsubmit="app.todosController.createTodo()">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="What are your aspirations?" name="description"
+                id="description" required>
+              <button class="btn btn-outline-secondary mdi mdi-plus" type="submit"></button>
+            </div>
+          </form>
         </div>
       </div>
+
     </div>
 
   </footer>
