@@ -9,12 +9,12 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/Todo').Todo[]} */
   todos = []
-
   imgUrl = ''
-  /** @type {import('./Models/Weather').Weather{}| null} */
   // @ts-ignore
   weather = null
   tempType = 'C'
+  quoteContent = ''
+  quoteAuthor = ''
 }
 
 export const appState = new Proxy(new AppState(), {
