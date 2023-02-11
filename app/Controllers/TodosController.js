@@ -9,13 +9,22 @@ function _drawTodos() {
     appState.todos.forEach(t => template += t.TodoTemplate)
     setHTML('todo-list-items', template)
     let count = appState.todos.filter(t => t.completed == false)
-    setText('todoCount', `${count.length} left`)
+    setText('todoCount', `${count.length}`)
+}
+
+function _flipChevron() {
+    // @ts-ignore
+    appState.chevron == 'up' ? document.getElementById('chevron').classList.remove('mdi-chevron-down') : document.getElementById('chevron').classList.remove('mdi-chevron-up')
+    // @ts-ignore
+    appState.chevron == 'up' ? document.getElementById('chevron').classList.add('mdi-chevron-up') : document.getElementById('chevron').classList.add('mdi-chevron-down')
+
 }
 
 export class TodosController {
     constructor() {
         this.getTodos()
         appState.on('todos', _drawTodos)
+        appState.on('chevron', _flipChevron)
     }
 
     async getTodos() {
@@ -60,5 +69,9 @@ export class TodosController {
             Pop.error(error.message)
             console.error('[check todo]', error)
         }
+    }
+
+    toggleChevron() {
+        todosService.toggleChevron()
     }
 }

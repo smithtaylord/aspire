@@ -3,6 +3,13 @@ import { Todo } from "../Models/Todo.js";
 import { sandboxApi } from "./AxiosService.js"
 
 class TodosService {
+    toggleChevron() {
+        if (appState.chevron == 'up') {
+            appState.chevron = 'down'
+        } else {
+            appState.chevron = 'up'
+        }
+    }
     async checkTodo(todoId) {
         const todoIndex = appState.todos.findIndex(t => t.id == todoId)
         const foundTodo = appState.todos[todoIndex]

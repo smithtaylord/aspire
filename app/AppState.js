@@ -16,6 +16,7 @@ class AppState extends EventEmitter {
   quoteContent = ''
   quoteAuthor = ''
   time = ''
+  chevron = 'up'
 }
 
 export const appState = new Proxy(new AppState(), {

@@ -13,7 +13,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>aspire</title>
@@ -62,13 +62,12 @@
   <footer class="container-fluid pb-2 mb-2">
     <div class="row">
       <div class="col-3 offset-1 glass-card rounded py-2">
-        <div class="d-flex justify-content-between p-2 text-shadow">
-          <h4>aspirations</h4>
-          <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            <i class="mdi mdi-chevron-up"></i>
-          </button>
-          <h4 id="todoCount">0 left</h4>
+        <div class="d-flex justify-content-between p-2">
+          <i id="chevron" class="mdi mdi-chevron-up fs-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+            onclick="app.todosController.toggleChevron()"></i>
+          <h4 class="fw-light">Aspirations yet to fulfill</h4>
+          <h4 id="todoCount"></h4>
         </div>
         <div class="collapse" id="collapseExample">
           <div id="todo-list-items">
