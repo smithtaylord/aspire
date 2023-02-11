@@ -9,6 +9,7 @@ function _drawImg() {
 }
 function _drawTime() {
     setText('time', appState.time)
+    setText('date', appState.date)
 }
 
 export class ImagesController {

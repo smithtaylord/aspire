@@ -16,6 +16,7 @@ class AppState extends EventEmitter {
   quoteContent = ''
   quoteAuthor = ''
   time = ''
+  date = ''
   chevron = 'up'
 }
 

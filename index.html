@@ -45,26 +45,37 @@
         <small class="on-hover text-shadow"><em>Achieve More with Aspire: Your Personal Task Master</em></small>
       </div>
       <div class="col-6 col-md-2 offset-md-6 py-3 ">
-        <div class="rounded text-end glass-card text-center py-3 text-shadow flip-card" id="weather">
+        <div class="rounded text-end glass-card text-center py-3 text-shadow" id="weather">
         </div>
       </div>
     </div>
   </header>
 
 
-  <main class="container-fluid sticky-top">
+  <main class="container-fluid">
     <div class="row">
-      <div class="col-10 m-auto">
+      <div class="col-6 m-auto">
         <div class="">
-          <h1 class="d-none d-md-block -bold text-center clock text-shadow my-5 py-5" id="time"></h1>
-        </div>
-        <div class="row">
-          <div class="col-md-6 offset-md-6">
-            <div class="p-2 text-shadow d-flex flex-column text-end pt-5 mt-5">
-              <p><em id="quote-content"> </em></p>
-              <p class="on-hover" id="quote-author"></p>
+          <div class="flip-card mb-5 pb-5">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1 class="d-none d-md-block fw-bold text-center clock text-shadow my-5 py-5" id="time"></h1>
+              </div>
+              <div class="flip-card-back">
+                <h1 class="d-none d-md-block fw-bold text-center clock text-shadow my-5 py-5" id="date"></h1>
+              </div>
             </div>
           </div>
+          <!-- <h1 class="d-none d-md-block -bold text-center clock text-shadow my-5 py-5" id="time"></h1>
+          <h1 class="d-none d-md-block -bold text-center clock text-shadow my-5 py-5" id="date"></h1> -->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-5 mt-5 pt-5">
+        <div class="p-2 text-shadow d-flex flex-column text-end pt-5 mt-5">
+          <p><em id="quote-content"> </em></p>
+          <p class="on-hover" id="quote-author"></p>
         </div>
       </div>
     </div>

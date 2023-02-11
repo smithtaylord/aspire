@@ -9,7 +9,7 @@ export class Todo {
     get TodoTemplate() {
         return `
         <div class="d-flex justify-content-between align-items-baseline px-2  rounded my-1">
-            <div class="mb-3 form-check">
+            <div class="mb-1 form-check">
                 <input ${this.completed ? 'checked' : ''}  type="checkbox" class="form-check-input" id="exampleCheck1" onchange="app.todosController.checkTodo('${this.id}')">
                 <label class="${this.completed ? "marked-off" : ""}">${this.description}</label>
             </div>
