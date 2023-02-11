@@ -1,17 +1,23 @@
 import { appState } from "../AppState.js";
 import { imagesService } from "../Services/ImagesService.js";
 import { Pop } from "../Utils/Pop.js";
-import { setHTML } from "../Utils/Writer.js";
+import { setHTML, setText } from "../Utils/Writer.js";
 
 function _drawImg() {
-    setHTML
+
     document.body.style.backgroundImage = `url(${appState.imgUrl})`
+}
+function _drawTime() {
+    setText('time', appState.time)
 }
 
 export class ImagesController {
     constructor() {
         this.getImage()
+        this.getTime
         appState.on('imgUrl', _drawImg)
+        appState.on('time', _drawTime)
+        setInterval(this.getTime, 1000)
     }
 
     async getImage() {
@@ -21,5 +27,9 @@ export class ImagesController {
             Pop.error(error.message)
             console.error('[get Image]', error)
         }
+    }
+
+    getTime() {
+        imagesService.getTime()
     }
 }

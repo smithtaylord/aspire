@@ -15,6 +15,7 @@ class AppState extends EventEmitter {
   tempType = 'C'
   quoteContent = ''
   quoteAuthor = ''
+  time = ''
 }
 
 export const appState = new Proxy(new AppState(), {
