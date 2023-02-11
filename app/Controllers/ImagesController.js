@@ -15,7 +15,7 @@ function _drawTime() {
 export class ImagesController {
     constructor() {
         this.getImage()
-        this.getTime
+        this.getTime()
         appState.on('imgUrl', _drawImg)
         appState.on('time', _drawTime)
         setInterval(this.getTime, 1000)

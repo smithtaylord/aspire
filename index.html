@@ -85,33 +85,38 @@
   <footer class="container-fluid pb-2 mb-2">
     <div class="row">
       <div class="col-10 col-md-3 offset-1 glass-card rounded py-2">
-        <div class="d-flex justify-content-between p-2">
-          <i id="chevron" class="mdi mdi-chevron-up fs-3" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
-            onclick="app.todosController.toggleChevron()"></i>
-          <h4 class="fw-light">Aspirations yet to fulfill</h4>
-          <h4 id="todoCount"></h4>
-        </div>
-        <div class="collapse" id="collapseExample">
-          <div id="todo-list-items">
-            <!-- <div class="d-flex justify-content-between align-items-baseline px-2">
+        <div>
+          <div class="d-flex justify-content-between p-2">
+            <i id="chevron" class="mdi mdi-chevron-up fs-3" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
+              onclick="app.todosController.toggleChevron()"></i>
+            <h4 class="fw-light">Aspirations yet to fulfill</h4>
+            <h4 id="todoCount"></h4>
+          </div>
+          <div class="collapse" id="collapseExample">
+            <div id="todo-list-items">
+              <!-- <div class="d-flex justify-content-between align-items-baseline px-2">
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label>This is my todo item</label>
             </div>
             <i class="mdi mdi-delete-circle text-danger selectable fs-4" onclick=""></i>
           </div> -->
-          </div>
-          <form onsubmit="app.todosController.createTodo()">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="What are your aspirations?" name="description"
-                id="description" required>
-              <button class="btn btn-outline-secondary mdi mdi-plus" type="submit"></button>
             </div>
-          </form>
+            <form onsubmit="app.todosController.createTodo()">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="What are your aspirations?" name="description"
+                  id="description" required>
+                <button class="btn btn-outline-secondary mdi mdi-plus" type="submit"></button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-
+      <div class="col-1 col-md-8 py-2 text-end">
+        <i type="button" class="mdi mdi-chevron-right next-img px-5 text-shadow" title="New Image and Quote"
+          onclick="app.imagesController.getImage(); app.quotesController.getQuotes()"></i>
+      </div>
     </div>
 
   </footer>
