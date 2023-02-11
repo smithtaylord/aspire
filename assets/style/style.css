@@ -5,6 +5,9 @@ body {
     background-position: center;
     height: 100vh;
     width: 100vw;
+    text-shadow: 2px 2px 3px rgb(1, 1, 20);
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
 }
 
 .marked-off {
@@ -14,4 +17,12 @@ body {
 
 .weather-card {
     cursor: pointer;
+}
+
+.clock {
+    font-size: 48pt;
+}
+
+.glass-card {
+    background-color: rgba(9, 15, 15, 0.329);
 }

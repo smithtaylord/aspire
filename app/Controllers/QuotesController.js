@@ -6,7 +6,7 @@ import { setText } from "../Utils/Writer.js";
 
 function _drawQuotes() {
     setText('quote-content', appState.quoteContent)
-    setText('quote-author', appState.quoteAuthor)
+    setText('quote-author', ` - ${appState.quoteAuthor}`)
 }
 export class QuotesController {
 

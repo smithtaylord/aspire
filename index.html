@@ -5,11 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link rel="icon"
+    href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25d45014-8cc3-4c98-b02c-5a0cf3a55ddd/dc5ct2h-a4664991-6222-40c3-8889-ae9f8243f8c9.png/v1/fill/w_900,h_878,strp/sun_on_a_transparent_background__by_prussiaart_dc5ct2h-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODc4IiwicGF0aCI6IlwvZlwvMjVkNDUwMTQtOGNjMy00Yzk4LWIwMmMtNWEwY2YzYTU1ZGRkXC9kYzVjdDJoLWE0NjY0OTkxLTYyMjItNDBjMy04ODg5LWFlOWY4MjQzZjhjOS5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.bgrvCmSX7qUYqbzTMWSv95wExfmU7h31akOaQBwzbrs">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
     integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>aspire</title>
@@ -36,9 +40,10 @@
   <header class="container-fluid my-2">
     <div class="row">
       <div class="col-3 px-3">
-        <h1>aspire</h1>
+        <h1 class="fs-3"> aspire <i class="mdi mdi-image-filter-drama-outline"></i></h1>
+        <small class="on-hover"><em>Achieve More with Aspire: Your Personal Task Master</em></small>
       </div>
-      <div class="col-2 offset-6 p-3 rounded text-end bg-dark text-light text-center" id="weather">
+      <div class="col-2 offset-6 py-3 rounded text-end glass-card text-center" id="weather">
         <!-- <div class="">
           <h3 selectable>26 c</h3>
           <h3>Sunny</h3>
@@ -52,7 +57,7 @@
     <div class="row h-100">
       <div class="col-6 m-auto ">
         <div class="">
-          <h1 class="fw-bold text-center" id="time"></h1>
+          <h1 class="fw-bold text-center clock" id="time"></h1>
         </div>
       </div>
     </div>
@@ -60,7 +65,7 @@
   <footer class="container pb-2">
     <div class="row">
 
-      <div class="col-4 bg-dark text-light rounded py-2">
+      <div class="col-4 glass-card rounded py-2">
         <div class="d-flex justify-content-between p-2">
           <h4>aspirations</h4>
           <h4 id="todoCount">0 left</h4>
@@ -83,7 +88,7 @@
         </form>
       </div>
       <div class="col-7 offset-1  py-5 d-flex align-items-end ">
-        <div class="text-light bg-dark p-2 rounded">
+        <div class="p-2 rounded">
           <p><em id="quote-content"> </em></p>
           <p class="on-hover" id="quote-author"></p>
         </div>

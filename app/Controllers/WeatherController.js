@@ -5,9 +5,11 @@ import { Pop } from "../Utils/Pop.js";
 import { setHTML } from "../Utils/Writer.js";
 
 function _drawWeather() {
+    // @ts-ignore
     let template = appState.weather.WeatherCard
     setHTML('weather', template)
-    let tempType = appState.tempType == 'C' ? `<h3>${appState.weather.tempC} C° </h3>` : `<h3>${appState.weather.tempF} F° </h3>`
+    // @ts-ignore
+    let tempType = appState.tempType == 'C' ? `<h3>${appState.weather.tempC} °C </h3>` : `<h3>${appState.weather.tempF} °F </h3>`
     setHTML('temp-type', tempType)
 }
 
