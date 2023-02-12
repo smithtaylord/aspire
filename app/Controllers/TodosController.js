@@ -111,4 +111,14 @@ export class TodosController {
             console.error('[set user]', error)
         }
     }
+
+    async logOut() {
+        try {
+            const yes = await Pop.confirm('Confirm Logout?')
+            if (!yes) { return }
+            todosService.logOut()
+        } catch (error) {
+            Pop.error(error.message)
+        }
+    }
 }

@@ -4,6 +4,11 @@ import { saveState } from "../Utils/Store.js";
 import { sandboxApi } from "./AxiosService.js"
 
 class TodosService {
+    logOut() {
+        appState.user = null
+        saveState('user', appState.user)
+        appState.emit('user')
+    }
     setUser(formData) {
 
         appState.user = formData.name

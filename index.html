@@ -103,14 +103,22 @@
 
   <footer class="d-none container-fluid pb-2 mb-2">
     <div class="row">
-      <div class="col-10 col-md-3 offset-1 glass-card rounded py-2">
+      <div class="col-1 ps-4 text-shadow d-flex flex-column justify-content-end">
+        <div>
+          <i class="mdi mdi-logout-variant fs-2" type="button" onclick="app.todosController.logOut()"></i>
+        </div>
+        <div>
+          <small class="">log out</small>
+        </div>
+      </div>
+      <div class="col-10 col-md-3 glass-card rounded py-2">
         <div>
           <div class="d-flex justify-content-between p-2">
             <i id="chevron" class="mdi mdi-chevron-up fs-3" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
               onclick="app.todosController.toggleChevron()"></i>
-            <h4 class="fw-light">Aspirations yet to fulfill</h4>
-            <h4 id="todoCount"></h4>
+            <h5 class="fw-light">Aspirations yet to fulfill</h5>
+            <h5 id="todoCount"></h5>
           </div>
           <div class="collapse" id="collapseExample">
             <div id="todo-list-items">
@@ -135,6 +143,7 @@
       <div class="col-12 col-md-8 py-2 text-end d-flex justify-content-end align-items-end">
         <i type="button" class="mdi mdi-chevron-right next-img px-5 text-shadow align-self-end"
           title="New Image and Quote" onclick="app.imagesController.getImage(); app.quotesController.getQuotes()"></i>
+
       </div>
     </div>
 
