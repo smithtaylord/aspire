@@ -18,7 +18,7 @@ class AppState extends EventEmitter {
   time = ''
   date = ''
   chevron = 'up'
-  user = null
+  user = localStorage.getItem('aspire_user')
 }
 
 export const appState = new Proxy(new AppState(), {

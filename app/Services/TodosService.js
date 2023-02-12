@@ -1,11 +1,13 @@
 import { appState } from "../AppState.js";
 import { Todo } from "../Models/Todo.js";
+import { saveState } from "../Utils/Store.js";
 import { sandboxApi } from "./AxiosService.js"
 
 class TodosService {
     setUser(formData) {
 
         appState.user = formData.name
+        saveState('user', appState.user)
         appState.emit('user')
 
     }
