@@ -29,6 +29,9 @@ function _drawTodos() {
         document.querySelector('footer').classList.remove('d-none')
         // @ts-ignore
         document.getElementById('log-in').classList.add('d-none')
+        // @ts-ignore
+        document.getElementById('welcome').classList.remove('hidden')
+
         setText('welcome', `Welcome, ${appState.user}`)
         setTimeout(() => {
             // @ts-ignore
