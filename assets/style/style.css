@@ -85,3 +85,9 @@ body {
 #welcome.hidden {
     opacity: 0;
 }
+
+#log-out {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 2vh;
+}

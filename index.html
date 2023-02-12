@@ -44,7 +44,7 @@
         <h1 class="fs-3 text-shadow"> aspire <i class="mdi mdi-image-filter-drama-outline"></i></h1>
         <small class="on-hover text-shadow"><em>Achieve More with Aspire: Your Personal Task Master</em></small>
       </div>
-      <div class="col-md-6 text-shadow text-center mt-4">
+      <div class="d-none d-md-block col-md-6 text-shadow text-center mt-4">
         <em class="fs-3" id="welcome">Welcome, User</em>
       </div>
       <div class="col-6 col-md-2 py-3 ">
@@ -106,17 +106,14 @@
 
   <footer class="d-none container-fluid pb-2 mb-2">
     <div class="row">
-      <div class="col-1 ps-4 text-shadow d-flex flex-column justify-content-end">
-        <div>
-          <i class="mdi mdi-logout-variant fs-2" type="button" onclick="app.todosController.logOut()"></i>
-        </div>
-        <div>
-          <small class="">log out</small>
-        </div>
+      <div class="d-none d-md-block col-1 ps-4 text-shadow flex-column d-flex justify-content-end align-items-end"
+        id="log-out">
+        <h2><i class="mdi mdi-logout-variant fs-2 " type="button" onclick="app.todosController.logOut()"></i></h2>
+        <small class="">log out</small>
       </div>
-      <div class="col-10 col-md-3 glass-card rounded py-2">
+      <div class="col-10 col-md-3 offset-1 offset-md-1 glass-card rounded py-2">
         <div>
-          <div class="d-flex justify-content-between p-2">
+          <div class="d-flex justify-content-between p-2 align-items-baseline">
             <i id="chevron" class="mdi mdi-chevron-up fs-3" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"
               onclick="app.todosController.toggleChevron()"></i>
