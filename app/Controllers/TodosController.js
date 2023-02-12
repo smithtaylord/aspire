@@ -29,6 +29,11 @@ function _drawTodos() {
         document.querySelector('footer').classList.remove('d-none')
         // @ts-ignore
         document.getElementById('log-in').classList.add('d-none')
+        setText('welcome', `Welcome, ${appState.user}`)
+        setTimeout(() => {
+            // @ts-ignore
+            document.getElementById('welcome').classList.add('hidden')
+        }, 3000);
     }
 }
 
@@ -79,7 +84,7 @@ export class TodosController {
             }
         } catch (error) {
             Pop.error(error.message)
-            console.error('[distroy Todo]', error)
+            console.error('[destroy Todo]', error)
         }
     }
 
