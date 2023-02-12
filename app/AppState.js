@@ -18,6 +18,7 @@ class AppState extends EventEmitter {
   time = ''
   date = ''
   chevron = 'up'
+  user = null
 }
 
 export const appState = new Proxy(new AppState(), {

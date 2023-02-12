@@ -38,7 +38,7 @@
 </style>
 
 <body class="">
-  <header class="container-fluid my-2 sticky-top">
+  <header class="d-none container-fluid my-2 sticky-top">
     <div class="row">
       <div class="col-6 col-md-3 px-5 mt-2">
         <h1 class="fs-3 text-shadow"> aspire <i class="mdi mdi-image-filter-drama-outline"></i></h1>
@@ -50,9 +50,28 @@
       </div>
     </div>
   </header>
+  <div class="container flex-grow-1 d-none" id="log-in">
+    <div class="row h-100 glass-card my-5 py-5 rounded">
+      <div class="col-12">
+        <div class="p-5 d-flex flex-column align-items-end">
+          <h1 class="">aspire <i class="mdi mdi-image-filter-drama-outline"></i></h1>
+          <small class=""><em>Achieve More with Aspire: Your Personal Task Master</em></small>
+        </div>
+        <div class="col-6 p-5">
+          <h4 class="p-3">We've noticed that you haven't logged in yet. </h4>
+          <h6 class="p-3"><em> To get started on your aspirations, please log in now</em></h6>
+          <form onsubmit="app.todosController.setUser()">
+            <div class="input-group mb-3 px-3">
+              <input type="text" class="form-control" placeholder="name..." name="name" id="name" required>
+              <button class="btn btn-outline-secondary mdi mdi-plus" type="submit"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-  <main class="container-fluid">
+  <main class="d-none container-fluid">
     <div class="row">
       <div class="col-6 m-auto">
         <div class="">
@@ -82,7 +101,7 @@
   </main>
 
 
-  <footer class="container-fluid pb-2 mb-2">
+  <footer class="d-none container-fluid pb-2 mb-2">
     <div class="row">
       <div class="col-10 col-md-3 offset-1 glass-card rounded py-2">
         <div>
@@ -113,9 +132,9 @@
           </div>
         </div>
       </div>
-      <div class="col-1 col-md-8 py-2 text-end">
-        <i type="button" class="mdi mdi-chevron-right next-img px-5 text-shadow" title="New Image and Quote"
-          onclick="app.imagesController.getImage(); app.quotesController.getQuotes()"></i>
+      <div class="col-1 col-md-8 py-2 text-end d-flex justify-content-end align-items-end">
+        <i type="button" class="mdi mdi-chevron-right next-img px-5 text-shadow align-self-end"
+          title="New Image and Quote" onclick="app.imagesController.getImage(); app.quotesController.getQuotes()"></i>
       </div>
     </div>
 
