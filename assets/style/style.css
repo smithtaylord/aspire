@@ -74,13 +74,15 @@ body {
 }
 
 .log-in {
-    width: 50vw;
+    width: 49vw;
 }
 
 #welcome {
     opacity: 1;
     transition: opacity 2s ease-out;
 }
+
+
 
 #welcome.hidden {
     opacity: 0;
